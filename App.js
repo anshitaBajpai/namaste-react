@@ -1,19 +1,55 @@
-const parent = React.createElement("div", { id: "parent" }, [
-  React.createElement("div", { id: "child1" }, [
-    React.createElement("h1", {}, "I am h1 tag"),
-    React.createElement("h2", {}, "I am h2 tag"),
-  ]),
-  React.createElement("div", { id: "child2" }, [
-    React.createElement("h1", {}, "I am h1 tag"),
-    React.createElement("h2", {}, "I am h2 tag"),
-  ]),
-]);
+import React from "react";
+import ReactDOM from "react-dom/client";
 
-// const heading = React.createElement(
-//   "h1",
-//   { id: "heading", xyz: "abc" },
-//   "Namaste React!!"
-// );
+const Header = () => {
+  return (
+    <div className="header">
+      <div>
+        <img
+          className="logo"
+          src="https://www.logodesign.net/logo/smoking-burger-with-lettuce-3624ld.png"
+        ></img>
+      </div>
+      <div className="nav-items">
+        <ul>
+          <li>Home</li>
+          <li>About Us</li>
+          <li>Contact Us</li>
+          <li>Cart</li>
+        </ul>
+      </div>
+    </div>
+  );
+};
+
+const RestaurantCard = () => {
+  return (
+    <div className="res-card">
+      <h3>Meghana Foods</h3>
+    </div>
+  );
+};
+
+const Body = () => {
+  return (
+    <div className="body">
+      <div className="search">Search</div>
+      <div className="res-container">
+        <RestaurantCard />
+      </div>
+    </div>
+  );
+};
+
+const AppLayout = () => {
+  return (
+    <div className="app">
+      <Header />
+      <Body />
+    </div>
+  );
+};
+
 const root = ReactDOM.createRoot(document.getElementById("root"));
-console.log(parent);
-root.render(parent);
+
+root.render(<AppLayout />);

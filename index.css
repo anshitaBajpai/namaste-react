@@ -1,8 +1,35 @@
-#heading {
-  color: blue;
+.header {
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid black;
 }
 
-#parent {
-  font-style: italic;
-  color: brown;
+.logo {
+  width: 200px;
+}
+
+.nav-items {
+  padding-right: 20px;
+}
+
+.nav-items > ul {
+  display: flex;
+  list-style-type: none;
+  font-size: 24px;
+}
+
+.nav-items > ul > li {
+  padding: 10px;
+  margin: 10px;
+}
+
+.res-card {
+  width: 200px;
+  height: 250px;
+  border: 1px solid black;
+  padding-left: 30px;
+}
+
+.search {
+  padding: 10px;
 }
