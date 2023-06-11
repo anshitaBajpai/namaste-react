@@ -60,3 +60,16 @@
   cursor: pointer;
   background-color: #9bf0e4;
 }
+
+.shimmer-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.shimmer-card {
+  padding: 10px;
+  width: 200px;
+  height: 300px;
+  margin: 10px;
+  background-color: rgb(240, 237, 237);
+}
