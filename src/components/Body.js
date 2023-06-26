@@ -8,6 +8,10 @@ const Body = () => {
 
   const [searchText, setSearchText] = useState("");
 
+  useEffect(() => {
+    fetchData();
+  }, []);
+
   const fetchData = async () => {
     const data = await fetch(
       "https://www.swiggy.com/dapi/restaurants/list/v5?lat=12.9351929&lng=77.62448069999999&page_type=DESKTOP_WEB_LISTING"
@@ -55,7 +59,7 @@ const Body = () => {
               (res) => res.data.avgRating > 4
             );
 
-            setListOfRestaurants(filteredList);
+            setFilteredRestaurants(filteredList);
           }}
         >
           Top Rated Restaurants
