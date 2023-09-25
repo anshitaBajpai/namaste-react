@@ -9,7 +9,7 @@ const RestaurantCard = (props) => {
     avgRating,
     costForTwo,
     deliveryTime,
-  } = resData?.data;
+  } = resData;
 
   return (
     <div className="res-card">
